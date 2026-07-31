@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import ContainerLayout from "@/layout/Container";
 
 import { ArrowRight, GitBranchPlus, LucideMapPinCheckInside, Mail } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
 const PortfolioHero = () => {
   return (
@@ -37,9 +38,12 @@ const PortfolioHero = () => {
               most people scroll past.
             </Paragraph>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2" onClick={()=>{
+                window.open("https://github.com/localcodetech", "_blank", "noopener, noreferrer")
+            }}>
 
               <Button
+            
                 size="lg"
                 className="rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
