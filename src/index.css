@@ -1,0 +1,229 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+
+  --background: hsl(180 5% 8%);          /* #121414 */
+  --foreground: hsl(0 0% 89%);           /* #e2e2e2 */
+
+  --card: hsl(180 3% 12%);               /* #1e2020 */
+  --card-foreground: hsl(0 0% 89%);
+
+  --popover: hsl(180 4% 11%);            /* #1a1c1c */
+  --popover-foreground: hsl(0 0% 89%);
+
+  --primary: hsl(186 100% 50%);          /* #00e5ff cyan */
+  --primary-foreground: hsl(187 100% 22%); /* #00626e */
+
+  --secondary: hsl(46 78% 60%);          /* #e9c349 amber */
+  --secondary-foreground: hsl(47 100% 12%);
+
+  --muted: hsl(200 4% 16%);              /* #282a2b */
+  --muted-foreground: hsl(190 15% 76%);  /* #bac9cc */
+
+  --accent: hsl(200 3% 22%);             /* #37393a */
+  --accent-foreground: hsl(0 0% 89%);
+
+  --destructive: hsl(6 100% 84%);        /* #ffb4ab */
+  --destructive-foreground: hsl(357 100% 21%);
+
+  --border: hsl(191 13% 26%);            /* #3b494c */
+  --input: hsl(191 13% 26%);
+  --ring: hsl(186 100% 50%);
+}
+
+/* same values for .dark so nothing breaks either way */
+.dark {
+  --background: hsl(180 5% 8%);
+  --foreground: hsl(0 0% 89%);
+  --card: hsl(180 3% 12%);
+  --card-foreground: hsl(0 0% 89%);
+  --popover: hsl(180 4% 11%);
+  --popover-foreground: hsl(0 0% 89%);
+  --primary: hsl(186 100% 50%);
+  --primary-foreground: hsl(187 100% 22%);
+  --secondary: hsl(46 78% 60%);
+  --secondary-foreground: hsl(47 100% 12%);
+  --muted: hsl(200 4% 16%);
+  --muted-foreground: hsl(190 15% 76%);
+  --accent: hsl(200 3% 22%);
+  --accent-foreground: hsl(0 0% 89%);
+  --destructive: hsl(6 100% 84%);
+  --destructive-foreground: hsl(357 100% 21%);
+  --border: hsl(191 13% 26%);
+  --input: hsl(191 13% 26%);
+  --ring: hsl(186 100% 50%);
+}
+
+/* ---------- turn those into tailwind classes ---------- */
+@theme inline {
+  /* shadcn colours */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@theme {
+  /* extra colour names copied from the sample */
+  --color-primary-container: #00e5ff;
+  --color-on-primary-container: #00626e;
+  --color-primary-fixed-dim: #00daf3;
+  --color-secondary-container: #af8d11;
+  --color-surface: #121414;
+  --color-surface-dim: #121414;
+  --color-surface-bright: #37393a;
+  --color-surface-variant: #333535;
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #bac9cc;
+  --color-outline: #849396;
+  --color-outline-variant: #3b494c;
+
+  /* fonts -> font-display, font-body, font-mono */
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* text sizes -> text-display-lg, text-headline-lg, etc */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 600;
+
+  --text-title-md: 20px;
+  --text-title-md--line-height: 28px;
+  --text-title-md--font-weight: 600;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+
+  --text-label-technical: 12px;
+  --text-label-technical--line-height: 16px;
+  --text-label-technical--letter-spacing: 0.05em;
+  --text-label-technical--font-weight: 500;
+
+  /* spacing -> p-gutter, px-margin-desktop, max-w-page */
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 48px;
+  --spacing-margin-mobile: 16px;
+  --container-page: 1440px;
+
+  /* animation -> animate-live-pulse */
+  --animate-live-pulse: live-pulse 2s infinite;
+
+  @keyframes live-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+}
+
+/* ---------- base ---------- */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ---------- helper classes from the sample ---------- */
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-panel-active,
+  .glass-panel:hover {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+  }
+
+  /* glowing dot for "live" badges */
+  .live-pulse {
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+    animation: live-pulse 2s infinite;
+  }
+
+  /* cyan glow for main buttons */
+  .glow-btn {
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-btn:hover {
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+  }
+
+  /* small uppercase mono label */
+  .tech-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .technical-border {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-pulse {
+    animation: none;
+  }
+}
