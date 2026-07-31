@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="flex items-center gap-4 ">
         {/* CTA */}
 
-        <Button  btnfunc={window.open("https://forms.gle/DpwFwqQHphY6N6pY7", "_blank", "noopener, noreferrer")} variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button>
+        <Button btnFuncUrl={"https://forms.gle/rNWdu9PDTsd5MJ736"}  variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button>
 
         <Button variant="default" className="bg-primary-container text-on-primary-container font-bold rounded-lg glow-btn hover:bg-primary-container"
         >Get Started</Button>
