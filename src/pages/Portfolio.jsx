@@ -1,11 +1,13 @@
-import ContainerLayout from "@/layout/Container";
+
+import PortfolioContact from "@/sections/portfolio/PortfolioContact";
+import PortfolioSkills from "@/sections/portfolio/PortfolioSkills";
 
 const PortfolioPage = ()=>{
     return(<>
     
-    <ContainerLayout>
-        
-    </ContainerLayout>
+   <PortfolioSkills/>
+   <PortfolioContact />
+
     </>)
 };
 export default  PortfolioPage;
