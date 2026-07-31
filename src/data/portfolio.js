@@ -1,31 +1,42 @@
 export const radioClients = [
   {
-    name: "Peace FM",
-    location: "Accra, Ghana",
-    detail: "104.3 MHz · HLS Stream",
-    link: "https://example.com",
+    name: "Mabesh FM",
+    location: "Atwima Kokoben, kumasi ",
+    detail: "Mabesh FM is a Radio station situated in Kumasi in the Ashanti Region of Ghana but with coverage across West Africa & other African countries. ",
+    link: "https://tunein.com/radio/Mabesh-FM-927Mhz-s358244/",
+    logo: "https://cdn-profiles.tunein.com/s358244/images/logod.png?t=639181083880000000"
   },
   {
-    name: "Angel FM",
-    location: "Kumasi, Ghana",
-    detail: "96.1 MHz · AAC+ 128kbps",
-    link: "https://example.com",
+    name: "Fish FM",
+    location: "Afigya Boamang",
+    detail: "FISH FM is a Private Commercial Radio Station based in Boamang the District capital of the Afigya Kwabre north in the Ashanti Region",
+    link: "https://tunein.com/radio/Fish-Fm-885-s343600/",
+    logo: "https://cdn-profiles.tunein.com/s343600/images/logod.png?t=638837625220000000"
   },
   {
-    name: "Adom FM",
-    location: "Tema, Ghana",
-    detail: "106.3 MHz · Live Uplink",
-    link: "https://example.com",
+    name: "Ahenfie FM",
+    location: "Adum, Kumasi",
+    detail: "Ahenfie Radio is a Adum Kumasi based commercial Radio broadcasting with the Radio Frequency 106.1Mhz.",
+    link: "https://tunein.com/radio/Ahenfie-FM-1061Mhz-s350080/",
+    logo: "https://cdn-profiles.tunein.com/s350080/images/logod.png?t=639145179930000000"
   },
+
+  {
+    name: "Radio 247", 
+    location: "Kanda, Accra",
+    detail: "Your home for the latest news, music and entertainment. Tune in for engaging discussions, exclusive interviews, and the hottest hits.",
+    link: "https://tunein.com/radio/Radio247-903FM-s343599/",
+    logo: "https://cdn-profiles.tunein.com/s343599/images/logod.jpg?t=638844208850000000"
+  }
 ];
 
 export const tvClients = [
   {
-    name: "UTV Ghana",
-    location: "Accra, Ghana",
-    detail: "1080p · Cloud Playout",
-    image: "https://i.imgur.com/5U66MJO.jpeg",
-    link: "https://example.com",
+    name: "NNB TV",
+    location: "Denver - Colorado, USA",
+    detail: "A colorado-based Online TV",
+    image: "https://tv.mynnbradio.com/logo",
+    link: "https://tv.mynnbradio.com/",
   },
   {
     name: "Adom TV",
