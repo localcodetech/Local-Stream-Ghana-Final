@@ -154,7 +154,7 @@ The project follows a reusable design system powered by **shadcn/ui**.
 Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/local-stream-ghana.git
+git clone https://github.com/localcodetech/Local-Stream-Ghana-Final.git
 ```
 
 Navigate to the project directory.
