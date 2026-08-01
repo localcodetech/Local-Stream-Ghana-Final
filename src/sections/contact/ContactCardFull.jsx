@@ -12,6 +12,7 @@ import ContainerLayout from "@/layout/Container";
 
 import { MapPin, Building2, Mail, Phone, MessageSquare, Globe, Link2, Send,
 } from "lucide-react";
+import TextLink from "@/components/common/TextLink";
 
 const ContactCardFull = () => {
   return (
@@ -82,21 +83,21 @@ const ContactCardFull = () => {
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-primary" />
                 <Paragraph className="text-body-sm text-on-surface">
-                  hello@localstreamgh.com
+                  <TextLink text={"info@localstreamgh.com"} link={"mailto:info@localstreamgh.com"} />
                 </Paragraph>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
                 <Paragraph className="text-body-sm text-on-surface">
-                  +233 244 123 456
+                  <TextLink text={"+233 507 288 745"} link={"tel:+233507288745"} />
                 </Paragraph>
               </div>
 
               <div className="flex items-center gap-3">
                 <MessageSquare size={16} className="text-primary" />
                 <Paragraph className="text-body-sm text-on-surface">
-                  WhatsApp Support
+                  <TextLink  text={"WhatsApp Support"} link={"https://wa.me/233507288745"} />
                 </Paragraph>
               </div>
 

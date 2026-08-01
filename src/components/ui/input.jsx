@@ -5,11 +5,13 @@ import { cn } from "@/lib/utils"
 
 function Input({
   className,
+  onChangeFunc,
   type,
   ...props
 }) {
   return (
     <InputPrimitive
+    onChange={onChangeFunc}
       type={type}
       data-slot="input"
       className={cn(

@@ -7,7 +7,7 @@ import ContainerLayout from "@/layout/Container";
 
 import { NavLink } from "react-router-dom";
 
-import { SignalZero , Home, ArrowLeft } from "lucide-react";
+import { AlertOctagonIcon , Home, ArrowLeft } from "lucide-react";
 
 const NotFound = () => {
   return (
@@ -18,7 +18,7 @@ const NotFound = () => {
         <div className="mx-auto max-w-xl space-y-8 text-center">
 
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-surface-bright">
-            <SignalZero size={36} className="text-secondary" />
+            <AlertOctagonIcon size={36} className="text-secondary animate-live-pulse"  />
           </div>
 
           <div className="space-y-4">

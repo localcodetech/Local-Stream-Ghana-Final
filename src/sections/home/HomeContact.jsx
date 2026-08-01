@@ -10,14 +10,10 @@ import { Label } from "@/components/ui/label";
 import ContainerLayout from "@/layout/Container";
 
 import { Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+// import { useState } from "react";
 
 const HomeContact = () => {
-  
-  const [form, setForm] = useState({
-
-  })
-  
+ 
   return (
     <section className="bg-surface-container-lowest py-24">
     <ContainerLayout>
@@ -74,7 +70,8 @@ const HomeContact = () => {
     {/* Form */}
     
     <div className="glass-panel rounded-3xl p-8">
-    <form className="space-y-6" m>
+
+    <form className="space-y-6" >
     <div className="grid gap-6 md:grid-cols-2">
     <div className="space-y-2">
     <Label htmlFor="name" className="tech-label text-on-surface-variant">
@@ -83,8 +80,9 @@ const HomeContact = () => {
     
     <Input
     id="name"
+    // value={form.name}
     type="text"
-    placeholder="John Doe"
+    placeholder="kwesi Edutwem"
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />
     </div>
@@ -93,12 +91,14 @@ const HomeContact = () => {
     <Label htmlFor="email" className="tech-label text-on-surface-variant" >
     Business Email
     </Label>
-    
+   
     <Input
     id="email"
-    value = ""
+   
+    
+    
     type="email"
-    placeholder="john@company.com"
+    placeholder="kwesi@company.com"
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />
     </div>
@@ -110,6 +110,8 @@ const HomeContact = () => {
     </Label>
     
     <select
+    
+    // value={form.select}
     id="service"
     className="w-full appearance-none rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
     >
@@ -128,6 +130,7 @@ const HomeContact = () => {
     <Textarea
     id="message"
     rows="4"
+    // value={form.message}
     placeholder="Tell us about your project..."
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />
