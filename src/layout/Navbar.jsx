@@ -4,6 +4,7 @@ import LogoImage from "@/components/common/logo";
 
 import { navigationLinks } from "@/data/navigation";
 import { NavLink } from "react-router-dom";
+import MobileMenu from "@/layout/MobileMenu";
 
 const Navbar = () => {
   return (
@@ -44,11 +45,15 @@ const Navbar = () => {
       <div className="flex items-center gap-4 ">
         {/* CTA */}
 
-        <Button btnFuncUrl={"https://forms.gle/rNWdu9PDTsd5MJ736"}  variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button>
+        <Button   variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button>
 
         <Button variant="default" className="bg-primary-container text-on-primary-container font-bold rounded-lg glow-btn hover:bg-primary-container"
         >Get Started</Button>
       </div>
+</div>
+
+<div className="md:hidden block">
+  <MobileMenu  />
 </div>
       </div>
     </header>
