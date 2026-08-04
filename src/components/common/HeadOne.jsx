@@ -1,10 +1,12 @@
-
+import {motion} from "motion/react"
 
 const Head = ({children, className=""})=>{
     return (
-    <h1 className={`${className}`}>
+    <motion.h1  
+   
+    className={`${className}`}>
         {children}
-    </h1>
+    </motion.h1>
     )
 };
 

@@ -10,10 +10,34 @@ import { Label } from "@/components/ui/label";
 import ContainerLayout from "@/layout/Container";
 
 import { Mail, MapPin } from "lucide-react";
-// import { useState } from "react";
+import { useState } from "react";
 
 const HomeContact = () => {
  
+const [detail, setDetail] = useState({
+  name: "",
+  email: "",
+  service: "",
+  message: ""
+})
+
+const formHandler = (e)=>{
+  if (e.target.id === "name"){
+    setDetail((prev)=>({...prev, name: e.target.value}))
+    return;
+  } else if (e.target.id === "email"){
+    setDetail((prev)=>({...prev, email: e.target.value}))
+  } else if (e.target.id === "service") {
+    setDetail((prev)=>({...prev, service: e.target.value}))
+    return;
+  } 
+  setDetail((prev)=>({...prev, message: e.target.value}))
+  return;
+}
+
+
+
+
   return (
     <section className="bg-surface-container-lowest py-24">
     <ContainerLayout>
@@ -80,8 +104,9 @@ const HomeContact = () => {
     
     <Input
     id="name"
-    // value={form.name}
+    value={detail.name}
     type="text"
+    onChangeFunc={formHandler}
     placeholder="kwesi Edutwem"
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />
@@ -94,8 +119,8 @@ const HomeContact = () => {
    
     <Input
     id="email"
-   
-    
+   value= {detail.email}
+    onChangeFunc={formHandler}
     
     type="email"
     placeholder="kwesi@company.com"
@@ -109,13 +134,14 @@ const HomeContact = () => {
     Service Interest
     </Label>
     
+
     <select
-    
-    // value={form.select}
+    onChange={formHandler}
+    value={detail.select}
     id="service"
     className="w-full appearance-none rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
     >
-    <option>IPTV & Streaming</option>
+    <option >IPTV & Streaming</option>
     <option>Software Development</option>
     <option>Broadcast Infrastructure</option>
     <option>Cloud Solutions</option>
@@ -127,10 +153,12 @@ const HomeContact = () => {
     Message
     </Label>
     
+
     <Textarea
     id="message"
+    onChange={formHandler}
     rows="4"
-    // value={form.message}
+    value={detail.message}
     placeholder="Tell us about your project..."
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />

@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import ContainerLayout from "@/layout/Container";
 
 import { ArrowRight, Play, Video, Server, Activity } from "lucide-react";
+import Anchor from "@/components/common/AnchorLink";
 
 const HeroSection = () => {
   return (
@@ -35,7 +36,7 @@ const HeroSection = () => {
     {/*  */}
     
     <span
-    className="   inline-flex items-center gap-2 rounded-full
+    className=" inline-flex items-center gap-2 rounded-full
          border border-primary/30 bg-primary-container/20 px-4 py-2
                 tech-label
                 text-primary-fixed-dim
@@ -47,9 +48,9 @@ const HeroSection = () => {
     
     {/* Heading */}
     
-    <Heading className="max-w-2xl font-display text-display-lg text-white">
+    <Heading className="max-w-2xl font-display text-display-lg text-white hover:text-accent-foreground duration-1000 transition hover:translate-y-0.5">
     Connecting Africa Through{" "}
-    <span className="text-primary-fixed-dim">Digital Media</span> & Technology
+    <span className="text-primary-fixed-dim hover:text-primary/90 animation-duration-initial transition-all">Digital Media</span> & Technology
     </Heading>
     
     {/* Paragraph */}
@@ -71,6 +72,8 @@ const HeroSection = () => {
     {/* CTA */}
     
     <div className="flex flex-wrap items-center gap-4">
+   
+   <Anchor link={"/services"}>
     <Button
     size="lg"
     className="
@@ -85,8 +88,10 @@ const HeroSection = () => {
     Explore Services
     <ArrowRight />
     </Button>
+   </Anchor>
     
-    <Button
+   <Anchor link={"/portfolio"}>
+     <Button
     size="lg"
     variant="outline"
     className="
@@ -102,6 +107,7 @@ const HeroSection = () => {
     <Play />
     View Portfolio
     </Button>
+   </Anchor>
     </div>
     </div>
     
@@ -132,7 +138,7 @@ const HeroSection = () => {
                       </Head>
                     </div>
 
-                    <Server size={34} className="text-primary" />
+                    <Server size={35} className="text-primary" />
                   </div>
 
                   <div className="space-y-3">
@@ -162,7 +168,7 @@ const HeroSection = () => {
                   </div>
 
                   <div className="flex items-center gap-2 text-body-sm text-on-surface-variant">
-                    <Activity size={16} className="text-secondary" />
+                    <Activity size={15} className="text-secondary" />
                     All systems operational
                   </div>
                 </div>
@@ -173,8 +179,8 @@ const HeroSection = () => {
               <HeroCard
                 className="
                 absolute
-                -top-12
-                -left-8
+                -top-10
+                -left-10
                 z-20
                 w-72
                 glass-panel-active

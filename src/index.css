@@ -92,7 +92,6 @@
 }
 
 @theme {
-  /* extra colour names copied from the sample */
   --color-primary-container: #00e5ff;
   --color-on-primary-container: #00626e;
   --color-primary-fixed-dim: #00daf3;

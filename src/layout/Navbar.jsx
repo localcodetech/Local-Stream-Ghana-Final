@@ -5,6 +5,7 @@ import LogoImage from "@/components/common/logo";
 import { navigationLinks } from "@/data/navigation";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "@/layout/MobileMenu";
+import { appName } from "@/data/appConstants";
 
 const Navbar = () => {
   return (
@@ -20,7 +21,7 @@ const Navbar = () => {
        <NavLink to={"/"} >
          <div className="flex  items-center ">
           <LogoImage image={"https://i.imgur.com/8A6aYJN.jpeg"} />
-        <span className="font-display text-primary-fixed-dim font-bold px-3 whitespace-nowrap hover:text-primary transition-colors">Local Stream Ghana</span>
+        <span className="font-display text-primary-fixed-dim font-bold px-3 whitespace-nowrap hover:text-primary transition-colors">{appName}</span>
          </div>
        </NavLink>
       </div>
@@ -31,7 +32,7 @@ const Navbar = () => {
      {navigationLinks.map((navItem) =>{
       return <NavLink  key={navItem.href}  to={navItem.href} className={({isActive})=>{
         return (
-            isActive ? "border-b-2 border-primary pb-1 text-primary font-bold" : "text-on-surface-variant font-medium hover:text-primary transition-colors duration-300"
+            isActive ? "border-b-2 border-primary pb-1 text-primary font-bold hover:text-primary-fixed-dim" : "text-on-surface-variant font-medium hover:text-primary  duration-1000 hover:-translate-y-0.5 transition "
         )
       }}>
         <li >{navItem.label}</li>

@@ -1,4 +1,6 @@
 
+export const appName = "Local Stream Ghana"
+
 
 export const worksLinks = [
 
