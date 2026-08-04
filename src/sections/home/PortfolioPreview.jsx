@@ -1,4 +1,5 @@
 import aboutImage from "@/assets/images/homepage.jpg";
+import Anchor from "@/components/common/AnchorLink";
 
 import Heading from "@/components/common/HeadingTag";
 import Head from "@/components/common/HeadOne";
@@ -70,10 +71,10 @@ const PortfolioPreview = () => {
               </div>
             </div>
 
-            <button className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-4">
+            <Anchor className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-4">
               Learn more about our journey
               <ArrowRight size={18} />
-            </button>
+            </Anchor>
           </div>
         </div>
       </ContainerLayout>

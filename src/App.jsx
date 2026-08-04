@@ -11,6 +11,8 @@ import RootLayout from "./layout/RootLayout";
 import TermsOfService from "./pages/Termsofservices";
 
 function App() {
+
+  
   return (
     <>
       <Routes>

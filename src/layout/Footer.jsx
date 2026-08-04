@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import ContainerLayout from "./Container";
 import { Rss, Satellite, Mail, Copyright } from "lucide-react";
 import TextLink from "@/components/common/TextLink";
+import { appName } from "@/data/appConstants";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
             <div className="space-y-6">
 
               <Head className="font-display text-headline-lg font-bold text-on-surface">
-                Local Stream Ghana
+                {appName}
               </Head>
 
               <Paragraph className="max-w-sm text-body-sm leading-6 text-on-surface-variant">

@@ -49,9 +49,8 @@ function Button({
 }) {
   return (
     <ButtonPrimitive
-    onClick={()=>{
-      window.open(btnFuncUrl, "_blank", "noopener, noreferrer")
-    }}
+    onClick={btnFuncUrl}
+      
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props} />

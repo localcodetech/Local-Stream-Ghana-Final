@@ -1,4 +1,5 @@
 
+import { appName } from "@/data/appConstants";
 import CallToAction from "@/sections/home/callToAction";
 import HeroSection from "@/sections/home/HeroSection";
 import HomeContact from "@/sections/home/HomeContact";
@@ -12,7 +13,6 @@ const HomePage =() =>{
 
     return (
         <main >
-
 <HeroSection />
 <ServicePreview />
 <StatsBand />
