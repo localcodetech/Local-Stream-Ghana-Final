@@ -8,6 +8,7 @@ import SolutionsPage from "./pages/Solutions";
 import TechnologyPage from "./pages/Technology";
 import NotFoundPage from "./pages/Notfound";
 import RootLayout from "./layout/RootLayout";
+import TermsOfService from "./pages/Termsofservices";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
-
+          <Route path="/termsofservices" element={<TermsOfService />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
