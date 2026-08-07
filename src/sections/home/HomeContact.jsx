@@ -95,7 +95,7 @@ const formHandler = (e)=>{
     
     <div className="glass-panel rounded-3xl p-8">
 
-    <form className="space-y-6" >
+    <form className="space-y-6" action={"https://formspree.io/f/xbdnepzo"} method="POST" >
     <div className="grid gap-6 md:grid-cols-2">
     <div className="space-y-2">
     <Label htmlFor="name" className="tech-label text-on-surface-variant">
@@ -166,6 +166,7 @@ const formHandler = (e)=>{
     
     <Button
     type="submit"
+    onClick = ""
     className="w-full rounded-xl bg-primary-container py-4 font-bold text-on-primary-container glow-btn hover:bg-primary-container"
     >
     Send Inquiry

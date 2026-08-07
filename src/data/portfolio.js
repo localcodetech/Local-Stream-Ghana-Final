@@ -39,18 +39,18 @@ export const tvClients = [
     link: "https://tv.mynnbradio.com/",
   },
   {
-    name: "Adom TV",
-    location: "Accra, Ghana",
-    detail: "720p · OTT Delivery",
-    image: "https://i.imgur.com/5U66MJO.jpeg",
-    link: "https://example.com",
+    name: "Ghana Web TV",
+    location: "East Legon, Accra Ghana",
+    detail: "Ghana's premier resource for news, sports, business, opinions and entertainment",
+    image: "https://i.imgur.com/1pOb7KN.jpeg",
+    link: "https://tv.localstreamgh.com/ghanawebtv/index.m3u8",
   },
   {
-    name: "Kessben TV",
-    location: "Kumasi, Ghana",
+    name: "Ahenfie TV",
+    location: "Adum, Kumasi, Ghana",
     detail: "1080p · IPTV Middleware",
     image: "https://i.imgur.com/5U66MJO.jpeg",
-    link: "https://example.com",
+    link: "https://tv.localstreamgh.com/ahenfietv/index.m3u8",
   },
 ];
 
