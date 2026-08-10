@@ -19,7 +19,7 @@ const HeroSection = () => {
     <img
     src={heroImage}
     alt="Local Stream Ghana"
-    fetchPriority="high"
+    loading="lazy"
     className="absolute inset-0 h-full w-full object-cover object-center"
     />
     

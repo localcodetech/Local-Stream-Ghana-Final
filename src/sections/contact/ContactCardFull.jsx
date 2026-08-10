@@ -10,9 +10,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 import ContainerLayout from "@/layout/Container";
 
-import { MapPin, Building2, Mail, Phone, MessageSquare, Globe, Link2, Send,
+import { MapPin, Building2, Mail, Phone, MessageSquare, Globe, Link2, Send, GitBranchIcon,
 } from "lucide-react";
 import TextLink from "@/components/common/TextLink";
+import Anchor from "@/components/common/AnchorLink";
 
 const ContactCardFull = () => {
   return (
@@ -42,9 +43,9 @@ const ContactCardFull = () => {
                   No. 24 Spintex Road, Opposite Zenith Bank, Accra, Ghana.
                 </Paragraph>
 
-                {/* <a href="#" className="tech-label text-primary-fixed-dim hover:text-primary">
-                  View on map ↗
-                </a> */}
+               <Anchor  className="tech-label text-primary-fixed-dim hover:text-primary">
+                View on map ↗
+               </Anchor>
 
               </div>
 
@@ -63,12 +64,12 @@ const ContactCardFull = () => {
                 </Head>
 
                 <Paragraph className="text-body-sm leading-6 text-on-surface-variant">
-                  Block B, Ahodwo Roundabout, Kumasi, Ashanti Region.
+                  Adum, Kumasi, around Melcom Building
                 </Paragraph>
 
-                <a href="#" className="tech-label text-primary-fixed-dim hover:text-primary">
+                <Anchor link={"https://maps.app.goo.gl/ewGEoQssJ3XFLWfe9"} target="_blank" className="tech-label text-primary-fixed-dim hover:text-primary">
                   View on map ↗
-                </a>
+                </Anchor>
 
               </div>
 
@@ -90,7 +91,7 @@ const ContactCardFull = () => {
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
                 <Paragraph className="text-body-sm text-on-surface">
-                  <TextLink text={"+233 507 288 745"} link={"tel:+233507288745"} />
+                  <TextLink text={"call us now"} link={"tel:+233507288745"} />
                 </Paragraph>
               </div>
 
@@ -109,17 +110,24 @@ const ContactCardFull = () => {
 
                 <div className="flex gap-3">
 
-                  <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary">
+                  <Anchor  link={"https://www.youtube.com/@richbenmediatech"}>
+                    <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary">
                     <Globe size={16} />
                   </button>
+                  </Anchor>
 
+                  <Anchor link={"https://github.com/localcodetech"}>
                   <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary">
-                    {/* <Youtube size={16} /> */}
+                    <GitBranchIcon size={16} />
                   </button>
+                  </Anchor>
 
-                  <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary">
+
+                 <Anchor link={"https://www.linkedin.com/in/richbenmedia/"}>
+                   <button className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary">
                     <Link2 size={16} />
-                  </button>
+                  </button> 
+                 </Anchor>
 
                 </div>
 
