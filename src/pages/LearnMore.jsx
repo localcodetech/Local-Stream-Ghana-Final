@@ -1,6 +1,6 @@
 import ContainerLayout from "@/layout/Container";
 
-const SolutionsPage =()=>{
+const LearnMorePage =()=>{
     return(<>
     <ContainerLayout>
 
@@ -13,4 +13,4 @@ const SolutionsPage =()=>{
     </>)
 };
 
-export default SolutionsPage;
+export default LearnMorePage;

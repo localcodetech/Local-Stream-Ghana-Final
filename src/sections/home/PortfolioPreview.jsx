@@ -71,7 +71,7 @@ const PortfolioPreview = () => {
               </div>
             </div>
 
-            <Anchor className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-4">
+            <Anchor link={"/more"} className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-4">
               Learn more about our journey
               <ArrowRight size={18} />
             </Anchor>
