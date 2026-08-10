@@ -6,7 +6,7 @@ const LearnMoreHero = ()=>{
     return(
         <>
         <ContainerLayout>
-        <div>
+        <div className="flex flex-1 ">
             <Head >
                 
             </Head>
