@@ -15,13 +15,6 @@ import Anchor from "@/components/common/AnchorLink";
 const HeroSection = () => {
   return (
     <section className="bg-[url(homepage.jpg)] bg-cover bg-center bg-no-repeat relative isolate min-h-dvh overflow-hidden  ">
-    {/* Background Image */}
-    {/* <img
-    src={heroImage}
-    alt="Local Stream Ghana"
-    loading="lazy"
-    className="absolute inset-0 h-full w-full object-cover object-center"
-    /> */}
     
     {/* Overlay */}
     <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-transparent" />
