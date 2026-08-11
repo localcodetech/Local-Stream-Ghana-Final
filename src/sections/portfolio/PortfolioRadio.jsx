@@ -17,7 +17,7 @@ const PortfolioRadio = () => {
         <div className="mb-12 space-y-4">
 
           <div className="flex items-center gap-3">
-            <Radio size={20} className="text-secondary" />
+            <Radio size={20} className="text-secondary animate-live-pulse" />
 
             <Paragraph className="tech-label text-secondary">
               Radio Clients

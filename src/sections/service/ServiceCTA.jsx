@@ -1,3 +1,4 @@
+import Anchor from "@/components/common/AnchorLink";
 import Head from "@/components/common/HeadOne";
 import Paragraph from "@/components/common/ParagraphTag";
 
@@ -29,13 +30,17 @@ const ServiceCta = () => {
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">
 
-              <Button
+              <Anchor download link={"https://a3hsldrxqggrzozj.public.blob.vercel-storage.com/Local_Stream_Ghana_Technical_Audit_Request_Form.pdf"}>
+                <Button
                 size="lg"
                 className="rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
                 Request a Technical Audit
               </Button>
+              </Anchor>
 
+
+                <Anchor download link={"https://a3hsldrxqggrzozj.public.blob.vercel-storage.com/Local_Stream_Ghana_Service_Brochure.pdf"}>
               <Button
                 size="lg"
                 variant="outline"
@@ -43,7 +48,7 @@ const ServiceCta = () => {
               >
                 Download Service Brochure
               </Button>
-
+              </Anchor>
             </div>
 
           </div>

@@ -43,9 +43,9 @@ const Footer = () => {
 
               <div className="flex flex-col gap-3">
 
-                <TextLink text="RichBen Media" link="" />
-                <TextLink text="LocalCode Technology" link="" />
-                <TextLink text="Portfolio" link="/" />
+                <TextLink text="RichBen Media" link="https://richbenmediagroup.com" />
+                <TextLink text="LocalCode Technology" link="https://localcodetech.netlify.app/" />
+                <TextLink text="Portfolio" link="/portfolio" />
 
               </div>
 
