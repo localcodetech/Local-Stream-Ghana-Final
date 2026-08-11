@@ -14,7 +14,7 @@ import Anchor from "@/components/common/AnchorLink";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[url(homepage.jpg)] bg-cover bg-center bg-no-repeat relative isolate min-h-dvh overflow-hidden bg-background">
+    <section className="bg-[url(homepage.jpg)] bg-cover bg-center bg-no-repeat relative isolate min-h-dvh overflow-hidden  ">
     {/* Background Image */}
     {/* <img
     src={heroImage}
