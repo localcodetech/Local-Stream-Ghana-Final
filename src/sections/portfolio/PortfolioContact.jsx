@@ -1,4 +1,5 @@
 
+import Anchor from "@/components/common/AnchorLink";
 import Head from "@/components/common/HeadOne";
 import Paragraph from "@/components/common/ParagraphTag";
 
@@ -29,15 +30,18 @@ const PortfolioContact = () => {
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">
 
-              <Button
+             <Anchor link={"mailto:superadmin@localstreamgh.com"}>
+               <Button
                 size="lg"
                 className="rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
                 <Mail size={16} />
                 Send Me an Email
               </Button>
+             </Anchor>
 
-              <Button
+             <Anchor  target="_blank" link={"https://github.com/localcodetech"}>
+               <Button
                 size="lg"
                 variant="outline"
                 className="rounded-lg border-secondary bg-transparent font-bold text-secondary hover:bg-secondary/10 hover:text-secondary"
@@ -45,6 +49,7 @@ const PortfolioContact = () => {
                 <GitBranchPlus size={16} />
                 View GitHub
               </Button>
+             </Anchor>
 
             </div>
 
@@ -58,7 +63,7 @@ const PortfolioContact = () => {
                 <LineSquiggleIcon size={18} />
               </a>
 
-              <a href="#" className="transition-colors hover:text-primary">
+              <a href="#"  className="transition-colors hover:text-primary">
                 <Mail size={18} />
               </a>
 
