@@ -8,14 +8,14 @@ const LearnMoreHero = ()=>{
     return(
         <>
         <ContainerLayout>
-        <div className="flex flex-1 flex-col  ">
-        <Head>
+        <div className="space-y-4 flex flex-col items-center justify-center border-b py-4 border-white/10 ">
+        <Head className="bg-primary-foreground/0  inline-flex  px-8 py-2 text-center leading-8 rounded shadow md:text-4xl text-2xl tracking-[0.2rem] uppercase hover:shadow-xl hover:shadow-white/1 duration-200 transition ">
         Learn More About Our Journey
         </Head>
         
-        <Head>From Media to Technology Infrastructure</Head>
+        <Head className="tracking-wider text-primary">From Media to Technology Infrastructure</Head>
         
-        <Paragraph className="whitespace-pre-wrap"> 
+        <Paragraph className="whitespace-pre-wrap leading-8"> 
         Local Stream Ghana was built around a simple idea:  <strong>Africa's digital future requires reliable infrastructure.</strong>
       
        {"\n"} 

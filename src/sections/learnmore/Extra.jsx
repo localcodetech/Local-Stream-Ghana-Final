@@ -164,9 +164,45 @@ Our ecosystem allows different areas of expertise to work together.
 
         <span>
             <strong>LocalCode Technology</strong>
+            <Paragraph>The technology-focused sub-company specializing in software and full-stack development.</Paragraph>
         </span>
     </section>
 
+    <Paragraph>This structure allows us to combine media expertise with software engineering and infrastructure technology.</Paragraph>
+
+    </HeroCard>
+
+</div>
+
+
+{/* 4 */}
+<div>
+    <HeroCard>
+        <Head>What We Believe</Head>
+
+        <Head>Technology Should Work for People</Head>
+
+        <Paragraph>We believe good technology should not create unnecessary complexity.</Paragraph>
+
+        <Paragraph>
+            <strong>Connect</strong>
+            <span>People should be able to access information, entertainment and services wherever they are.</span>
+        </Paragraph>
+
+<Paragraph>
+    <strong>Scale</strong>
+    <span>Businesses should be able to grow without constantly rebuilding their technology infrastructure.</span>
+</Paragraph>
+
+<Paragraph>
+    <strong>Perform</strong>
+    <span>Digital platforms should be fast, stable and dependable.</span>
+</Paragraph>
+
+<Paragraph>
+    <strong>Empower</strong>
+    <span>African businesses and creators should have access to the tools required to compete globally.</span>
+</Paragraph>
     </HeroCard>
 
 </div>
