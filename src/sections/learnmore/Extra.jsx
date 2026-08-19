@@ -14,8 +14,8 @@ const LearnEXtra = () =>{
     <section className="space-y-4">
     
     <div>
-    <HeroCard className="">
-    <Head className="">
+    <HeroCard className="space-y-4 text-sm">
+    <Head className="leading-8 ">
     Our Beginning
     </Head>
     
