@@ -1,13 +1,14 @@
+import Anchor from "@/components/common/AnchorLink";
 import Head from "@/components/common/HeadOne";
 import Paragraph from "@/components/common/ParagraphTag";
 
 import { Button } from "@/components/ui/button";
 
 import ContainerLayout from "@/layout/Container";
+import { ArrowRight } from "lucide-react";
 
-import { ArrowRight, GitBranchPlus, LucideMapPinCheckInside, Mail } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
 
+import {FaFacebook, FaYoutube, FaLinkedin} from "react-icons/fa"
 const PortfolioHero = () => {
   return (
     <section className="bg-background pb-16 pt-32">
@@ -38,11 +39,10 @@ const PortfolioHero = () => {
               most people scroll past.
             </Paragraph>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2" onClick={()=>{
-                window.open("https://github.com/localcodetech", "_blank", "noopener, noreferrer")
-            }}>
+            <div className="flex flex-wrap items-center gap-4 pt-2">
 
-              <Button
+             <Anchor  link={"https://github.com/localcodetech"}>
+               <Button
             
                 size="lg"
                 className="rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
@@ -51,27 +51,31 @@ const PortfolioHero = () => {
                 <ArrowRight size={16} />
               </Button>
 
+             </Anchor>
               <div className="flex gap-3">
                 <a
                 
-                  href="#"
+                  target="_blank"
+                  href="https://www.facebook.com/localstreamghana"
                   className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary"
                 >
-                  <GitBranchPlus size={18} />
+                  <FaFacebook size={18} />
                 </a>
 
                 <a
-                  href="#"
+                target="_blank"
+                  href="https://www.youtube.com/@richbenmediatech"
                   className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary"
                 >
-                  <LucideMapPinCheckInside size={18} />
+                  <FaYoutube size={18} />
                 </a>
 
                 <a
-                  href="#"
+                target="_blank"
+                  href="https://www.linkedin.com/in/richbenmedia/"
                   className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-bright text-on-surface-variant transition-colors hover:text-primary"
                 >
-                  <Mail size={18} />
+                  <FaLinkedin size={18} />
                 </a>
 
               </div>
