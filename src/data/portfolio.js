@@ -48,8 +48,8 @@ export const tvClients = [
   {
     name: "Ahenfie TV",
     location: "Adum, Kumasi, Ghana",
-    detail: "1080p · IPTV Middleware",
-    image: "https://i.imgur.com/5U66MJO.jpeg",
+    detail: "Ahenfie TV is a Satellite & Telestrial Commercial Station established in 2025",
+    image: "https://i.imgur.com/SmsQ5Fy.png",
     link: "https://tv.localstreamgh.com/ahenfietv/index.m3u8",
   },
 ];

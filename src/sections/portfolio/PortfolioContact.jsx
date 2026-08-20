@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button";
 
 import ContainerLayout from "@/layout/Container";
 
-import { Mail, GitBranchPlus, LineSquiggleIcon } from "lucide-react";
+import { Mail, GitBranchPlus } from "lucide-react";
+
+import {FaInstagram, FaLinkedin, } from "react-icons/fa"
 
 const PortfolioContact = () => {
   return (
@@ -55,15 +57,15 @@ const PortfolioContact = () => {
 
             <div className="flex items-center justify-center gap-6 pt-6 tech-label text-on-surface-variant">
 
-              <a href="#" className="transition-colors hover:text-primary">
-                <GitBranchPlus size={18} />
+              <a href="https://www.instagram.com/richben_media/" target="_blank" className="transition-colors hover:text-primary">
+                <FaInstagram size={18} />
               </a>
 
-              <a href="#" className="transition-colors hover:text-primary">
-                <LineSquiggleIcon size={18} />
+              <a href="https://www.linkedin.com/in/richbenmedia/" className="transition-colors hover:text-primary">
+                <FaLinkedin size={18} />
               </a>
 
-              <a href="#"  className="transition-colors hover:text-primary">
+              <a href="mailto:localstreamghana@gmail.com"   className="transition-colors hover:text-primary">
                 <Mail size={18} />
               </a>
 
