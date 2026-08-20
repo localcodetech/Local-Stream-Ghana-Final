@@ -21,12 +21,12 @@ import { useState } from "react";
 const ContactCardFull = () => {
 
 const [state, handleSubmit] = useForm('xwleawob')
-if (state.succeeded) {
-  return <Paragraph>done!</Paragraph>
-}
+
 
 const [check, setCheck] = useState(false)
-console.log(check)
+
+
+
 return (
     <section className="bg-background pb-24">
 
@@ -269,6 +269,9 @@ return (
               <Button
                 type="submit"
                 size="lg"
+                onClick={(e)=>{
+                    e.target.prevent
+                }}
                 disable={state.submitting}
                 className="w-full rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
