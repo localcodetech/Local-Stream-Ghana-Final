@@ -177,6 +177,7 @@ return (
                     id="fullname"
                     type="text"
                     name='name'
+                    required
                     placeholder="Kofi Mensah"
                     className="rounded-lg border-outline-variant bg-surface-container-low px-4 py-3 text-white"
                   />
@@ -193,6 +194,7 @@ return (
                     id="email"
                     type="email"
                     name= 'email'
+                    required
                     placeholder="kofi@organization.gh"
                     className="rounded-lg border-outline-variant bg-surface-container-low px-4 py-3 text-white"
                   />
@@ -212,6 +214,7 @@ return (
                   <select
                     id="category"
                     name="category"
+                    required= {true}
                     className="w-full appearance-none rounded-lg border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                   >
                     <option>Select a Service</option>
