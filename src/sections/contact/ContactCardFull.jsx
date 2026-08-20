@@ -15,8 +15,19 @@ import { MapPin, Building2, Mail, Phone, MessageSquare, Globe, Link2, Send, GitB
 import TextLink from "@/components/common/TextLink";
 import Anchor from "@/components/common/AnchorLink";
 
+import {useForm, ValidationError} from "@formspree/react"
+import { useState } from "react";
+
 const ContactCardFull = () => {
-  return (
+
+const [state, handleSubmit] = useForm('xwleawob')
+if (state.succeeded) {
+  return <Paragraph>done!</Paragraph>
+}
+
+const [check, setCheck] = useState(false)
+console.log(check)
+return (
     <section className="bg-background pb-24">
 
       <ContainerLayout>
@@ -145,7 +156,7 @@ const ContactCardFull = () => {
               Service Request Form
             </Head>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
 
               <div className="grid gap-6 md:grid-cols-2">
 
@@ -157,9 +168,12 @@ const ContactCardFull = () => {
                   <Input
                     id="fullname"
                     type="text"
+                    name='name'
                     placeholder="Kofi Mensah"
                     className="rounded-lg border-outline-variant bg-surface-container-low px-4 py-3 text-white"
                   />
+
+                  <ValidationError prefix="name" field="name" errors={state.errors} />
                 </div>
 
                 <div className="space-y-2">
@@ -170,9 +184,12 @@ const ContactCardFull = () => {
                   <Input
                     id="email"
                     type="email"
+                    name= 'email'
                     placeholder="kofi@organization.gh"
                     className="rounded-lg border-outline-variant bg-surface-container-low px-4 py-3 text-white"
                   />
+
+                  <ValidationError prefix="email" field="email" errors={state.errors} />
                 </div>
 
               </div>
@@ -186,6 +203,7 @@ const ContactCardFull = () => {
 
                   <select
                     id="category"
+                    name="category"
                     className="w-full appearance-none rounded-lg border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                   >
                     <option>Select a Service</option>
@@ -194,6 +212,8 @@ const ContactCardFull = () => {
                     <option>Cloud Solutions</option>
                     <option>Software Development</option>
                   </select>
+
+                  <ValidationError field="category" prefix="category" errors={state.errors} />
                 </div>
 
                 <div className="space-y-2">
@@ -203,12 +223,15 @@ const ContactCardFull = () => {
 
                   <select
                     id="budget"
+                    name="budget"
                     className="w-full appearance-none rounded-lg border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                   >
                     <option>GHS 5,000 - GHS 15,000</option>
                     <option>GHS 15,000 - GHS 50,000</option>
                     <option>GHS 50,000+</option>
                   </select>
+
+                  <ValidationError prefix="budget" field="budget" errors={state.errors} />
                 </div>
 
               </div>
@@ -221,22 +244,32 @@ const ContactCardFull = () => {
                 <Textarea
                   id="details"
                   rows="5"
+                  name="details"
                   placeholder="Briefly describe your production needs, expected audience size, and venue location..."
                   className="rounded-lg border-outline-variant bg-surface-container-low px-4 py-3 text-white"
                 />
+                <ValidationError prefix="details" field="details" errors={state.errors}  />
               </div>
 
               <div className="flex items-center gap-3">
-                <Checkbox id="urgent" className="border-outline-variant" />
+                <Checkbox type="checkbox" id="urgent" className="border-outline-variant"
+                 name={`${check}`}
+                onCheckedChange={(checked)=>{
+                  setCheck(checked)
+                }}
+                />
 
                 <Label htmlFor="urgent" className="text-body-sm text-on-surface-variant">
                   This is an urgent request (Required within 48 hours)
                 </Label>
+
+                <ValidationError prefix="urgent" field={check} errors={state.errors} />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
+                disable={state.submitting}
                 className="w-full rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
                 Send Transmission

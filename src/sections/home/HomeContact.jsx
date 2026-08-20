@@ -12,7 +12,11 @@ import ContainerLayout from "@/layout/Container";
 import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 
+import { useForm, ValidationError } from "@formspree/react";
+
 const HomeContact = () => {
+
+  const [state, handleSubmit] = useForm('xbdnepzo')
  
 const [detail, setDetail] = useState({
   name: "",
@@ -20,6 +24,10 @@ const [detail, setDetail] = useState({
   service: "",
   message: ""
 })
+
+if (state.succeeded){
+  return <Paragraph>Done</Paragraph>
+}
 
 const formHandler = (e)=>{
   if (e.target.id === "name"){
@@ -30,7 +38,7 @@ const formHandler = (e)=>{
   } else if (e.target.id === "service") {
     setDetail((prev)=>({...prev, service: e.target.value}))
     return;
-  } 
+  } else if (e.target.id === "message")
   setDetail((prev)=>({...prev, message: e.target.value}))
   return;
 }
@@ -95,7 +103,7 @@ const formHandler = (e)=>{
     
     <div className="glass-panel rounded-3xl p-8">
 
-    <form className="space-y-6" action={"https://formspree.io/f/xbdnepzo"} method="POST" >
+    <form className="space-y-6" onSubmit={handleSubmit} method="POST" >
     <div className="grid gap-6 md:grid-cols-2">
     <div className="space-y-2">
     <Label htmlFor="name" className="tech-label text-on-surface-variant">
@@ -106,9 +114,16 @@ const formHandler = (e)=>{
     id="name"
     value={detail.name}
     type="text"
+    name='name'
     onChangeFunc={formHandler}
     placeholder="kwesi Edutwem"
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
+    />
+
+    <ValidationError 
+    prefix="name"
+    field="name"
+    errors={state.errors}
     />
     </div>
     
@@ -121,10 +136,15 @@ const formHandler = (e)=>{
     id="email"
    value= {detail.email}
     onChangeFunc={formHandler}
-    
+    name='email'
     type="email"
     placeholder="kwesi@company.com"
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
+    />
+    <ValidationError 
+    prefix="Email"
+    field="email"
+    errors={state.errors}
     />
     </div>
     </div>
@@ -139,6 +159,7 @@ const formHandler = (e)=>{
     onChange={formHandler}
     value={detail.select}
     id="service"
+    name="service"
     className="w-full appearance-none rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
     >
     <option >IPTV & Streaming</option>
@@ -146,6 +167,13 @@ const formHandler = (e)=>{
     <option>Broadcast Infrastructure</option>
     <option>Cloud Solutions</option>
     </select>
+
+    <ValidationError
+    
+    prefix="service"
+    field="service"
+    errors={state.errors}
+    />
     </div>
     
     <div className="space-y-2">
@@ -158,15 +186,21 @@ const formHandler = (e)=>{
     id="message"
     onChange={formHandler}
     rows="4"
+    name="message"
     value={detail.message}
     placeholder="Tell us about your project..."
     className="rounded-xl border-outline-variant bg-surface-container-low px-4 py-3 text-white"
     />
+  <ValidationError 
+  prefix="message"
+  field="message"
+  />
+
     </div>
     
     <Button
     type="submit"
-    onClick = ""
+    disable= {state.submitting}
     className="w-full rounded-xl bg-primary-container py-4 font-bold text-on-primary-container glow-btn hover:bg-primary-container"
     >
     Send Inquiry
