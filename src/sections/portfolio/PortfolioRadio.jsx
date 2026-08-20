@@ -65,7 +65,7 @@ const PortfolioRadio = () => {
                     {station.location}
                   </Paragraph>
 
-                  <div className="flex items-center gap-2 border-t border-outline-variant/50 pt-4 tech-label text-on-surface-variant">
+                  <div className="flex items-center  gap-2 border-t border-outline-variant/50 pt-4 tech-label text-on-surface-variant">
                     <span className="size-2 rounded-full bg-primary-fixed-dim live-pulse" />
                     {station.detail}
                   </div>
