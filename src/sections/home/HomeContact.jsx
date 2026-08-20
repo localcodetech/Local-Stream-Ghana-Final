@@ -118,6 +118,7 @@ const formHandler = (e)=>{
     </Label>
     
     <Input
+    required
     id="name"
     value={detail.name}
     type="text"
@@ -140,6 +141,7 @@ const formHandler = (e)=>{
     </Label>
    
     <Input
+    required
     id="email"
    value= {detail.email}
     onChangeFunc={formHandler}
