@@ -13,6 +13,7 @@ import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { ToastContainer,toast } from "react-toastify";
 
 const HomeContact = () => {
 
@@ -25,8 +26,14 @@ const [detail, setDetail] = useState({
   message: ""
 })
 
-if (state.succeeded){
-  return <Paragraph>Done</Paragraph>
+const notify = ()=> toast("message sent")
+
+const notificationHandler = ()=>{
+
+  if (state.succeeded){
+    return notify
+  }
+
 }
 
 const formHandler = (e)=>{
@@ -200,11 +207,13 @@ const formHandler = (e)=>{
     
     <Button
     type="submit"
+    onClick= {notificationHandler()}
     disable= {state.submitting}
     className="w-full rounded-xl bg-primary-container py-4 font-bold text-on-primary-container glow-btn hover:bg-primary-container"
     >
     Send Inquiry
     </Button>
+    <ToastContainer />
     </form>
     </div>
     </div>

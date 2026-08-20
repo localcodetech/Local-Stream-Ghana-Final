@@ -18,15 +18,23 @@ import Anchor from "@/components/common/AnchorLink";
 import {useForm, ValidationError} from "@formspree/react"
 import { useState } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+
 const ContactCardFull = () => {
 
 const [state, handleSubmit] = useForm('xwleawob')
-if (state.succeeded) {
-  return <Paragraph>done!</Paragraph>
-}
+
 
 const [check, setCheck] = useState(false)
-console.log(check)
+
+const notify = ()=> toast("message sent thank you")
+
+const notificationHandler = ()=>{
+  if (state.succeeded){
+    return notify
+  }
+}
+
 return (
     <section className="bg-background pb-24">
 
@@ -269,12 +277,14 @@ return (
               <Button
                 type="submit"
                 size="lg"
+                onClick={notificationHandler()}
                 disable={state.submitting}
                 className="w-full rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >
                 Send Transmission
                 <Send size={16} />
               </Button>
+              <ToastContainer />
 
             </form>
 
