@@ -6,6 +6,7 @@ import { navigationLinks } from "@/data/navigation";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "@/layout/MobileMenu";
 import { appName } from "@/data/appConstants";
+import Anchor from "@/components/common/AnchorLink";
 
 const Navbar = () => {
   return (
@@ -46,10 +47,13 @@ const Navbar = () => {
       <div className="flex items-center gap-4 ">
         {/* CTA */}
 
-        <Button   variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button>
+{/*       
+        <Button   variant="ghost" size="lg" className="text-primary-fixed-dim font-bold hover:text-primary hover:bg-transparent transition-all">Request a Quote</Button> */}
+  
 
+<Anchor link={"https://docs.google.com/forms/d/e/1FAIpQLScYdUfbzA4pLz9VGbc6A11fVlWpgBiIxjgxrUThDxYj8qRLEA/viewform?usp=dialog"} >
         <Button variant="default" className="bg-primary-container text-on-primary-container font-bold rounded-lg glow-btn hover:bg-primary-container"
-        >Get Started</Button>
+        >Get Started</Button>   </Anchor>
       </div>
 </div>
 

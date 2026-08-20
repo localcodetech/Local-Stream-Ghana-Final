@@ -75,14 +75,14 @@ const MobileMenu = () => {
         </nav>
 
         <div className="flex flex-col gap-3 px-6 pt-4">
-          <Button
+          {/* <Button
             
             variant="ghost"
             className="w-full font-bold text-primary-fixed-dim hover:bg-transparent hover:text-primary"
             onClick={() => setOpen(false)}
           >
             Request a Quote
-          </Button>
+          </Button> */}
 
           <Button
             variant="default"
