@@ -17,7 +17,7 @@ const CoreValues = () => {
   return (
     <section className="space-y-16 bg-surface-container-lowest py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         {/* Heading */}
         <div className="mx-auto mb-16 max-w-2xl space-y-4 text-center">
@@ -59,7 +59,7 @@ const CoreValues = () => {
           </HeroCard>
 
           {/* Excellence */}
-          <HeroCard className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
+          <HeroCard delay={0.12} className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
 
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 text-primary">
               <Award size={28} />
@@ -77,7 +77,7 @@ const CoreValues = () => {
           </HeroCard>
 
           {/* Reliability */}
-          <HeroCard className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
+          <HeroCard delay={0.24} className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
 
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 text-primary">
               <ShieldCheck size={28} />
@@ -113,7 +113,7 @@ const CoreValues = () => {
           </HeroCard>
 
           {/* Transparency */}
-          <HeroCard className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
+          <HeroCard delay={0.12} className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
 
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 text-primary">
               <Zap size={28} />
@@ -131,7 +131,7 @@ const CoreValues = () => {
           </HeroCard>
 
           {/* User-Centric */}
-          <HeroCard className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
+          <HeroCard delay={0.24} className="glass-panel flex flex-col items-center gap-6 rounded-2xl p-8 text-center">
 
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20 text-primary">
               <Eye size={28} />

@@ -11,6 +11,15 @@ import ContainerLayout from "@/layout/Container";
 
 import { ArrowRight, Play, Video, Server, Activity } from "lucide-react";
 import Anchor from "@/components/common/AnchorLink";
+import { motion } from "motion/react";
+import { ease } from "@/lib/motion";
+
+// on load (not on scroll, the hero is already visible): fade + rise in, one after another by delay
+const enter = (delay, from = { y: 60 }) => ({
+  initial: { opacity: 0, ...from },
+  animate: { opacity: 1, x: 0, y: 0, scale: 1 },
+  transition: { duration: 0.9, ease, delay },
+});
 
 const HeroSection = () => {
   return (
@@ -28,12 +37,12 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-dvh items-center pt-24">
-        <ContainerLayout>
+        <ContainerLayout animated={false}>
 
           <div className="grid items-center gap-16 lg:grid-cols-2">
 
             {/* Left Side */}
-            <div className="space-y-8">
+            <motion.div className="space-y-8" {...enter(0)}>
 
               {/* Status */}
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary-container/20 px-4 py-2 text-primary-fixed-dim">
@@ -83,13 +92,16 @@ const HeroSection = () => {
                 </Anchor>
 
               </div>
-            </div>
+            </motion.div>
 
             {/* Right Side */}
             <div className="relative hidden lg:block">
 
               {/* Main Card */}
-              <HeroCard className="w-full rounded-3xl glass-panel">
+              <HeroCard
+                className="w-full rounded-3xl glass-panel"
+                {...enter(0.3, { y: 80, scale: 0.94 })}
+              >
                 <div className="space-y-6">
 
                   <div className="flex items-center justify-between">
@@ -143,7 +155,10 @@ const HeroSection = () => {
               </HeroCard>
 
               {/* Floating Card */}
-              <HeroCard className="absolute -left-10 -top-10 z-20 w-72 rounded-2xl glass-panel-active">
+              <HeroCard
+                className="absolute -left-10 -top-10 z-20 w-72 rounded-2xl glass-panel-active"
+                {...enter(0.6, { x: -40, y: -20, scale: 0.9 })}
+              >
 
                 <div className="space-y-5">
 

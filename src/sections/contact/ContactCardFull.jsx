@@ -16,7 +16,7 @@ import TextLink from "@/components/common/TextLink";
 import Anchor from "@/components/common/AnchorLink";
 
 import {useForm, ValidationError} from "@formspree/react"
-import { useState } from "react";
+import { useEffect } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 
@@ -24,21 +24,16 @@ const ContactCardFull = () => {
 
 const [state, handleSubmit] = useForm('xwleawob')
 
-
-const [check, setCheck] = useState(false)
-
-const notify = ()=> toast("message sent thank you")
-
-const notificationHandler = ()=>{
+useEffect(()=>{
   if (state.succeeded){
-    return notify
+    toast("message sent thank you")
   }
-}
+}, [state.succeeded])
 
 return (
     <section className="bg-background pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="grid grid-cols-1 gap-gutter lg:grid-cols-3">
 
@@ -70,7 +65,7 @@ return (
 
             </HeroCard>
 
-            <HeroCard className="glass-panel flex gap-4 rounded-2xl p-6">
+            <HeroCard delay={0.12} className="glass-panel flex gap-4 rounded-2xl p-6">
 
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-bright">
                 <Building2 size={18} className="text-primary" />
@@ -94,7 +89,7 @@ return (
 
             </HeroCard>
 
-            <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+            <HeroCard delay={0.24} className="glass-panel space-y-4 rounded-2xl p-6">
 
               <Paragraph className="tech-label text-on-surface-variant">
                 Direct Communication
@@ -158,7 +153,7 @@ return (
 
           {/* Form */}
 
-          <HeroCard className="glass-panel rounded-2xl p-8 lg:col-span-2">
+          <HeroCard lift={false} className="glass-panel rounded-2xl p-8 lg:col-span-2">
 
             <Head className="mb-8 font-display text-headline-lg font-semibold text-white">
               Service Request Form
@@ -263,24 +258,21 @@ return (
               </div>
 
               <div className="flex items-center gap-3">
-                <Checkbox type="checkbox" id="urgent" className="border-outline-variant"
-                 name={`${check}`}
-                onCheckedChange={(checked)=>{
-                  setCheck(checked)
-                }}
+                <Checkbox id="urgent" className="border-outline-variant"
+                 name="urgent"
+                 value="yes"
                 />
 
                 <Label htmlFor="urgent" className="text-body-sm text-on-surface-variant">
                   This is an urgent request (Required within 48 hours)
                 </Label>
 
-                <ValidationError prefix="urgent" field={check} errors={state.errors} />
+                <ValidationError prefix="urgent" field="urgent" errors={state.errors} />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                onClick={notificationHandler()}
                 disable={state.submitting}
                 className="w-full rounded-lg bg-primary-container font-bold text-on-primary-container glow-btn hover:bg-primary-container"
               >

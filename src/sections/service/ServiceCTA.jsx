@@ -5,14 +5,16 @@ import Paragraph from "@/components/common/ParagraphTag";
 import { Button } from "@/components/ui/button";
 
 import ContainerLayout from "@/layout/Container";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const ServiceCta = () => {
   return (
     <section className="bg-background pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
-        <div className="glass-panel rounded-3xl px-8 py-16 text-center">
+        <motion.div {...reveal(0)} className="glass-panel rounded-3xl px-8 py-16 text-center">
 
           <div className="mx-auto max-w-2xl space-y-6">
 
@@ -53,7 +55,7 @@ const ServiceCta = () => {
 
           </div>
 
-        </div>
+        </motion.div>
 
       </ContainerLayout>
 

@@ -8,15 +8,17 @@ import Paragraph from "@/components/common/ParagraphTag";
 import ContainerLayout from "@/layout/Container";
 
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const PortfolioPreview = () => {
   return (
     <div className="bg-surface-dim py-24">
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Image */}
 
-          <div className="glass-panel relative aspect-square overflow-hidden rounded-3xl p-2 lg:aspect-video">
+          <motion.div {...reveal(0)} className="glass-panel relative aspect-square overflow-hidden rounded-3xl p-2 lg:aspect-video">
             <img
               src={aboutImage}
               alt="Broadcast engineer at a mixing console"
@@ -24,7 +26,7 @@ const PortfolioPreview = () => {
             />
 
             <div className="absolute inset-0 bg-primary-container/10 mix-blend-overlay" />
-          </div>
+          </motion.div>
 
           {/* Text */}
 

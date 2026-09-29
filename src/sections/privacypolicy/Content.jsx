@@ -10,10 +10,10 @@ const PrivacyContent  = () => {
 
     return (
         <div className="py-20 border-b border-accent">
-          <ContainerLayout>
+          <ContainerLayout animated={false}>
             <section className=" max-w-5xl mx-auto space-y-8   lg:px-30 border-primary/5 shadow-accent ">
                   {privacyContent.map((item,index)=>{
-                return <HeroCard key={item.head} className=" ">
+                return <HeroCard lift={false} key={item.head} className=" ">
                     <Head className="text-2xl md:text-4xl text-primary text-center">
                        {index + 1 + ".  " }  {item.head}
                     </Head>

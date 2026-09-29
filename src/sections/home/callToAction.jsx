@@ -5,12 +5,14 @@ import Paragraph from "@/components/common/ParagraphTag";
 import ContainerLayout from "@/layout/Container";
 
 import { Smartphone, Database } from "lucide-react";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const CallToAction = () => {
     return (
         <section className="border-t border-primary/20 bg-surface-container-low py-24">
-        <ContainerLayout>
-        <div className="glass-panel relative overflow-hidden rounded-3xl p-8 md:p-16">
+        <ContainerLayout animated={false}>
+        <motion.div {...reveal(0)} className="glass-panel relative overflow-hidden rounded-3xl p-8 md:p-16">
         {/* Code Decoration */}
         
         <div className="pointer-events-none absolute right-0 top-0 hidden whitespace-pre p-8 font-mono text-body-sm text-primary opacity-10 lg:block">
@@ -64,25 +66,25 @@ const CallToAction = () => {
             
             <div className="lg:col-span-5">
             <div className="grid grid-cols-2 gap-4">
-            <div className="glass-panel-active flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-6 text-center">
+            <motion.div {...reveal(0.5)} className="glass-panel-active card-lift flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-6 text-center">
             <Smartphone className="text-primary" size={36} />
             
             <Head className="text-title-md font-semibold text-white">
             App Dev
             </Head>
-            </div>
+            </motion.div>
             
-            <div className="glass-panel flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-6 text-center">
+            <motion.div {...reveal(0.62)} className="glass-panel card-lift flex aspect-square flex-col items-center justify-center gap-4 rounded-2xl p-6 text-center">
             <Database className="text-on-surface-variant" size={36} />
             
             <Head className="text-title-md font-semibold text-white">
             Big Data
             </Head>
+            </motion.div>
             </div>
             </div>
             </div>
-            </div>
-            </div>
+            </motion.div>
             </ContainerLayout>
             </section>
         );

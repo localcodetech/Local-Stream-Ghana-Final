@@ -13,9 +13,9 @@ const PrivacyContact = () =>{
     return (
     <section className="pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
-        <HeroCard className="overflow-hidden rounded-4xl border border-border bg-card">
+        <HeroCard lift={false} className="overflow-hidden rounded-4xl border border-border bg-card">
 
           <div className="flex flex-col gap-10 p-8 md:p-12 lg:flex-row lg:items-center lg:justify-between">
 

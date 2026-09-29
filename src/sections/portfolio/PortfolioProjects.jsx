@@ -14,7 +14,7 @@ const PortfolioProjects = () => {
   return (
     <section className="bg-background py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="mx-auto mb-16 max-w-2xl space-y-4 text-center">
 
@@ -75,7 +75,7 @@ const PortfolioProjects = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+          <HeroCard delay={0.12} className="glass-panel space-y-4 rounded-2xl p-6">
 
             <div className="flex items-start justify-between">
 
@@ -103,7 +103,7 @@ const PortfolioProjects = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+          <HeroCard delay={0.24} className="glass-panel space-y-4 rounded-2xl p-6">
 
             <div className="flex items-start justify-between">
 

@@ -4,11 +4,13 @@ import TextLink from "@/components/common/TextLink";
 import aboutImage from "@/assets/images/server-farm.jpg";
 
 import ContainerLayout from "@/layout/Container";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const MissionVision = () => {
   return (
     <section className="bg-surface-dim py-24">
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Left Side */}
           <div className="space-y-8">
@@ -50,7 +52,7 @@ const MissionVision = () => {
           {/* Right Side */}
           <div className="flex justify-center lg:justify-end">
 
-            <div className="glass-panel relative w-full max-w-xl overflow-hidden rounded-3xl p-2">
+            <motion.div {...reveal(0)} className="glass-panel relative w-full max-w-xl overflow-hidden rounded-3xl p-2">
 
               <img
                 src={aboutImage}
@@ -61,7 +63,7 @@ const MissionVision = () => {
 
               <div className="absolute inset-0 bg-primary-container/10 mix-blend-overlay" />
 
-            </div>
+            </motion.div>
 
           </div>
         </div>

@@ -5,11 +5,13 @@ import Paragraph from "@/components/common/ParagraphTag";
 import ContainerLayout from "@/layout/Container";
 
 import { Radio, Terminal, Tv, Podcast, Settings, Cloud, Globe, Code } from "lucide-react";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const ServicePreview = () => {
   return (
     <section className="py-24 bg-surface-container-lowest">
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
         {/* Section Title */}
 
         <div className="mb-16 space-y-4 text-center">
@@ -36,7 +38,7 @@ const ServicePreview = () => {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="glass-panel rounded-2xl p-6 transition-all">
+              <motion.div {...reveal(0)} className="glass-panel rounded-2xl p-6 card-lift">
                 <Tv className="mb-4 text-primary-fixed-dim" size={30} />
 
                 <Head className="mb-2 text-title-md font-semibold text-white">
@@ -47,9 +49,9 @@ const ServicePreview = () => {
                   Custom middleware and delivery networks for modern TV
                   providers.
                 </Paragraph>
-              </div>
+              </motion.div>
 
-              <div className="glass-panel rounded-2xl p-6 transition-all">
+              <motion.div {...reveal(0.12)} className="glass-panel rounded-2xl p-6 card-lift">
                 <Podcast className="mb-4 text-primary-fixed-dim" size={30} />
 
                 <Head className="mb-2 text-title-md font-semibold text-white">
@@ -59,9 +61,9 @@ const ServicePreview = () => {
                 <Paragraph className="text-body-sm text-on-surface-variant">
                   Low-latency video and radio streaming for global audiences.
                 </Paragraph>
-              </div>
+              </motion.div>
 
-              <div className="glass-panel flex items-center gap-6 rounded-2xl p-6 transition-all sm:col-span-2">
+              <motion.div {...reveal(0.24)} className="glass-panel flex items-center gap-6 rounded-2xl p-6 card-lift sm:col-span-2">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-surface-bright">
                   <Settings className="text-primary-fixed-dim" size={28} />
                 </div>
@@ -75,7 +77,7 @@ const ServicePreview = () => {
                     Master Control Room design, setup, and maintenance services.
                   </Paragraph>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -91,7 +93,7 @@ const ServicePreview = () => {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="glass-panel flex items-center gap-6 rounded-2xl p-6 transition-all sm:col-span-2">
+              <motion.div {...reveal(0)} className="glass-panel flex items-center gap-6 rounded-2xl p-6 card-lift sm:col-span-2">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-surface-bright">
                   <Cloud className="text-primary-fixed-dim" size={28} />
                 </div>
@@ -106,9 +108,9 @@ const ServicePreview = () => {
                     infrastructure.
                   </Paragraph>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="glass-panel rounded-2xl p-6 transition-all">
+              <motion.div {...reveal(0.12)} className="glass-panel rounded-2xl p-6 card-lift">
                 <Globe className="mb-4 text-primary-fixed-dim" size={30} />
 
                 <Head className="mb-2 text-title-md font-semibold text-white">
@@ -118,9 +120,9 @@ const ServicePreview = () => {
                 <Paragraph className="text-body-sm text-on-surface-variant">
                   Premium software development for media platforms.
                 </Paragraph>
-              </div>
+              </motion.div>
 
-              <div className="glass-panel rounded-2xl p-6 transition-all">
+              <motion.div {...reveal(0.24)} className="glass-panel rounded-2xl p-6 card-lift">
                 <Code className="mb-4 text-primary-fixed-dim" size={30} />
 
                 <Head className="mb-2 text-title-md font-semibold text-white">
@@ -130,7 +132,7 @@ const ServicePreview = () => {
                 <Paragraph className="text-body-sm text-on-surface-variant">
                   Bespoke automation tools for broadcast workflows.
                 </Paragraph>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

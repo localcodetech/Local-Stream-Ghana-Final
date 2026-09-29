@@ -10,10 +10,12 @@ import { Label } from "@/components/ui/label";
 import ContainerLayout from "@/layout/Container";
 
 import { Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useForm, ValidationError } from "@formspree/react";
 import { ToastContainer,toast } from "react-toastify";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const HomeContact = () => {
 
@@ -26,15 +28,11 @@ const [detail, setDetail] = useState({
   message: ""
 })
 
-const notify = ()=> toast("message sent")
-
-const notificationHandler = ()=>{
-
+useEffect(()=>{
   if (state.succeeded){
-    return notify
+    toast("message sent")
   }
-
-}
+}, [state.succeeded])
 
 const formHandler = (e)=>{
   if (e.target.id === "name"){
@@ -55,7 +53,7 @@ const formHandler = (e)=>{
 
   return (
     <section className="bg-surface-container-lowest py-24">
-    <ContainerLayout>
+    <ContainerLayout animated={false}>
     <div className="grid gap-20 lg:grid-cols-2">
     {/* Left side */}
     
@@ -108,7 +106,7 @@ const formHandler = (e)=>{
     
     {/* Form */}
     
-    <div className="glass-panel rounded-3xl p-8">
+    <motion.div {...reveal(0)} className="glass-panel rounded-3xl p-8">
 
     <form className="space-y-6" onSubmit={handleSubmit} method="POST" >
     <div className="grid gap-6 md:grid-cols-2">
@@ -166,7 +164,7 @@ const formHandler = (e)=>{
 
     <select
     onChange={formHandler}
-    value={detail.select}
+    value={detail.service}
     id="service"
     name="service"
     className="w-full appearance-none rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary"
@@ -203,13 +201,13 @@ const formHandler = (e)=>{
   <ValidationError 
   prefix="message"
   field="message"
+  errors={state.errors}
   />
 
     </div>
     
     <Button
     type="submit"
-    onClick= {notificationHandler()}
     disable= {state.submitting}
     className="w-full rounded-xl bg-primary-container py-4 font-bold text-on-primary-container glow-btn hover:bg-primary-container"
     >
@@ -217,7 +215,7 @@ const formHandler = (e)=>{
     </Button>
     <ToastContainer />
     </form>
-    </div>
+    </motion.div>
     </div>
     </ContainerLayout>
     </section>

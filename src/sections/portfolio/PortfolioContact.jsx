@@ -10,14 +10,16 @@ import ContainerLayout from "@/layout/Container";
 import { Mail, GitBranchPlus } from "lucide-react";
 
 import {FaInstagram, FaLinkedin, } from "react-icons/fa"
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const PortfolioContact = () => {
   return (
     <section className="bg-surface-container-lowest py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
-        <div className="glass-panel rounded-3xl px-8 py-16 text-center">
+        <motion.div {...reveal(0)} className="glass-panel rounded-3xl px-8 py-16 text-center">
 
           <div className="mx-auto max-w-2xl space-y-6">
 
@@ -73,7 +75,7 @@ const PortfolioContact = () => {
 
           </div>
 
-        </div>
+        </motion.div>
 
       </ContainerLayout>
 

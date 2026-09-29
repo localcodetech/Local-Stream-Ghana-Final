@@ -10,7 +10,7 @@ const PortfolioSkills = () => {
   return (
     <section className="bg-surface-container-lowest py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="mx-auto mb-16 max-w-2xl space-y-4 text-center">
 
@@ -53,7 +53,7 @@ const PortfolioSkills = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-8">
+          <HeroCard delay={0.12} className="glass-panel space-y-4 rounded-2xl p-8">
 
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
               <Server size={22} className="text-primary" />
@@ -76,7 +76,7 @@ const PortfolioSkills = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-8">
+          <HeroCard delay={0.24} className="glass-panel space-y-4 rounded-2xl p-8">
 
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
               <Code2 size={22} className="text-primary" />

@@ -22,7 +22,7 @@ const ServiceGridTwo = () => {
   return (
     <section className="bg-background pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="space-y-gutter">
 
@@ -62,7 +62,7 @@ const ServiceGridTwo = () => {
 
               </HeroCard>
 
-              <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+              <HeroCard delay={0.12} className="glass-panel space-y-4 rounded-2xl p-6">
 
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-bright">
                   <BarChart3 size={20} className="text-primary" />
@@ -93,7 +93,7 @@ const ServiceGridTwo = () => {
 
             </div>
 
-            <HeroCard className="glass-panel relative flex flex-col justify-end overflow-hidden rounded-2xl p-0 md:col-span-2">
+            <HeroCard delay={0.24} className="glass-panel relative flex flex-col justify-end overflow-hidden rounded-2xl p-0 md:col-span-2">
 
               <img
                 src="https://i.imgur.com/5U66MJO.jpeg"
@@ -172,7 +172,7 @@ const ServiceGridTwo = () => {
 
             </HeroCard>
 
-            <HeroCard className="glass-panel-active space-y-4 rounded-2xl p-8 md:col-span-2">
+            <HeroCard delay={0.12} className="glass-panel-active space-y-4 rounded-2xl p-8 md:col-span-2">
 
               <div className="flex items-center gap-3">
 
@@ -220,7 +220,7 @@ const ServiceGridTwo = () => {
 
           <div className="grid grid-cols-1 gap-gutter md:grid-cols-3">
 
-            <HeroCard className="glass-panel relative space-y-4 overflow-hidden rounded-2xl p-8 md:col-span-2">
+            <HeroCard delay={0.24} className="glass-panel relative space-y-4 overflow-hidden rounded-2xl p-8 md:col-span-2">
 
               <div className="flex items-center gap-3">
 
@@ -294,7 +294,7 @@ const ServiceGridTwo = () => {
 
           <div className="grid grid-cols-1 gap-gutter md:grid-cols-3">
 
-            <HeroCard className="glass-panel space-y-4 rounded-2xl border-b-2 border-b-secondary p-6">
+            <HeroCard delay={0.12} className="glass-panel space-y-4 rounded-2xl border-b-2 border-b-secondary p-6">
 
               <Satellite size={22} className="text-secondary" />
 
@@ -309,7 +309,7 @@ const ServiceGridTwo = () => {
 
             </HeroCard>
 
-            <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+            <HeroCard delay={0.24} className="glass-panel space-y-4 rounded-2xl p-6">
 
               <CloudCog size={22} className="text-primary" />
 

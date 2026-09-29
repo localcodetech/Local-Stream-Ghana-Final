@@ -10,7 +10,7 @@ const ServiceGrid = () => {
   return (
     <section className="bg-background pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="grid grid-cols-1 gap-gutter md:grid-cols-3">
 
@@ -62,7 +62,7 @@ const ServiceGrid = () => {
 
           {/* right side */}
 
-          <HeroCard className="glass-panel flex flex-col gap-4 overflow-hidden rounded-2xl p-0">
+          <HeroCard delay={0.12} className="glass-panel flex flex-col gap-4 overflow-hidden rounded-2xl p-0">
 
             <div className="relative h-44 shrink-0">
               <img

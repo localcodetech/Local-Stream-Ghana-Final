@@ -11,7 +11,7 @@ const TermsContent = () => {
       <div className="mx-auto max-w-5xl space-y-8">
 
     {termsofServiceList.map((item, index)=>{
-      return <HeroCard className="space-y-4" key={item.description}>
+      return <HeroCard lift={false} className="space-y-4" key={item.description}>
         <Heading className="" >
           {index +1 }{". "}{item.title}
         </Heading>

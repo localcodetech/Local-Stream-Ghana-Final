@@ -12,7 +12,7 @@ const PortfolioRadio = () => {
   return (
     <section className="bg-background py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="mb-12 space-y-4">
 
@@ -37,7 +37,7 @@ const PortfolioRadio = () => {
 
         <div className="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-3">
 
-          {radioClients.map((station) => {
+          {radioClients.map((station, index) => {
             return (
               <a
                 key={station.name}
@@ -45,7 +45,7 @@ const PortfolioRadio = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <HeroCard className="glass-panel h-full space-y-4 rounded-2xl p-6">
+                <HeroCard delay={(index % 3) * 0.12} className="glass-panel h-full space-y-4 rounded-2xl p-6">
 
                   <div className="flex items-start justify-between">
 

@@ -212,6 +212,16 @@
     text-transform: uppercase;
   }
 
+  /* hover lift for cards; uses `translate` (not `transform`) so it doesn't
+     clash with motion's scroll-in animation */
+  .card-lift {
+    transition: translate 0.3s ease, background-color 0.3s ease,
+      border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-lift:hover {
+    translate: 0 -6px;
+  }
+
   .technical-border {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -224,5 +234,8 @@
 @media (prefers-reduced-motion: reduce) {
   .live-pulse {
     animation: none;
+  }
+  .card-lift:hover {
+    translate: none;
   }
 }

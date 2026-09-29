@@ -12,7 +12,7 @@ const PortfolioTv = () => {
   return (
     <section className="bg-surface-container-lowest py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="mb-12 space-y-4">
 
@@ -37,7 +37,7 @@ const PortfolioTv = () => {
 
         <div className="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-3">
 
-          {tvClients.map((channel) => {
+          {tvClients.map((channel, index) => {
             return (
               <a
                 key={channel.name}
@@ -45,7 +45,7 @@ const PortfolioTv = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <HeroCard className="glass-panel flex h-full flex-col overflow-hidden rounded-2xl p-0">
+                <HeroCard delay={(index % 3) * 0.12} className="glass-panel flex h-full flex-col overflow-hidden rounded-2xl p-0">
 
                   <div className="relative h-40 shrink-0">
                     <img

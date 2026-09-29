@@ -10,7 +10,7 @@ const ContactProduction = () => {
   return (
     <section className="bg-background pb-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <Head className="mb-12 text-center font-display text-headline-lg font-semibold text-white">
           Production Consultation
@@ -33,7 +33,7 @@ const ContactProduction = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+          <HeroCard delay={0.12} className="glass-panel space-y-4 rounded-2xl p-6">
 
             <Handshake size={24} className="text-secondary" />
 
@@ -48,7 +48,7 @@ const ContactProduction = () => {
 
           </HeroCard>
 
-          <HeroCard className="glass-panel space-y-4 rounded-2xl p-6">
+          <HeroCard delay={0.24} className="glass-panel space-y-4 rounded-2xl p-6">
 
             <Receipt size={24} className="text-primary" />
 

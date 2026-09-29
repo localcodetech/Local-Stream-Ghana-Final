@@ -9,11 +9,13 @@ import { ArrowRight } from "lucide-react";
 
 
 import {FaFacebook, FaYoutube, FaLinkedin} from "react-icons/fa"
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 const PortfolioHero = () => {
   return (
     <section className="bg-background pb-16 pt-32">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="grid items-center gap-16 lg:grid-cols-3">
 
@@ -86,7 +88,7 @@ const PortfolioHero = () => {
 
           {/* Photo */}
 
-          <div className="glass-panel relative overflow-hidden rounded-3xl p-2">
+          <motion.div {...reveal(0)} className="glass-panel relative overflow-hidden rounded-3xl p-2">
 
             <img
               src="https://a3hsldrxqggrzozj.public.blob.vercel-storage.com/localstreamghceo.jpg"
@@ -97,7 +99,7 @@ const PortfolioHero = () => {
 
             <div className="absolute inset-0 bg-primary-container/10 mix-blend-overlay" />
 
-          </div>
+          </motion.div>
 
         </div>
 

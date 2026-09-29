@@ -3,12 +3,14 @@ import Head from "@/components/common/HeadOne";
 import Paragraph from "@/components/common/ParagraphTag";
 
 import ContainerLayout from "@/layout/Container";
+import { motion } from "motion/react";
+import { reveal } from "@/lib/motion";
 
 const ServiceHero = () => {
   return (
     <section className="bg-background pb-16 pt-32">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="grid items-start gap-12 lg:grid-cols-3">
 
@@ -41,7 +43,7 @@ const ServiceHero = () => {
 
           {/* Stats box */}
 
-          <div className="glass-panel flex gap-8 rounded-2xl p-6 lg:justify-end">
+          <motion.div {...reveal(0)} className="glass-panel flex gap-8 rounded-2xl p-6 lg:justify-end">
 
             <div className="space-y-1">
               <Paragraph className="tech-label text-on-surface-variant">
@@ -65,7 +67,7 @@ const ServiceHero = () => {
               </Head>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

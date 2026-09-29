@@ -10,7 +10,7 @@ const TechnicalPrinciple = () => {
   return (
     <section className="bg-surface-container-lowest py-24">
 
-      <ContainerLayout>
+      <ContainerLayout animated={false}>
 
         <div className="space-y-16">
 
@@ -56,7 +56,7 @@ const TechnicalPrinciple = () => {
 
             </HeroCard>
 
-            <HeroCard className="glass-panel space-y-6 rounded-2xl p-8">
+            <HeroCard delay={0.12} className="glass-panel space-y-6 rounded-2xl p-8">
 
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
                 <Eye className="text-primary" />
@@ -81,7 +81,7 @@ const TechnicalPrinciple = () => {
 
           <div className="grid gap-gutter sm:grid-cols-2 lg:grid-cols-4">
 
-            <HeroCard className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
+            <HeroCard delay={0.24} className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
 
               <Calendar className="text-primary" size={28} />
 
@@ -109,7 +109,7 @@ const TechnicalPrinciple = () => {
 
             </HeroCard>
 
-            <HeroCard className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
+            <HeroCard delay={0.12} className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
 
               <RadioTower className="text-primary" size={28} />
 
@@ -123,7 +123,7 @@ const TechnicalPrinciple = () => {
 
             </HeroCard>
 
-            <HeroCard className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
+            <HeroCard delay={0.24} className="glass-panel flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center">
 
               <ShieldCheck className="text-primary" size={28} />
 

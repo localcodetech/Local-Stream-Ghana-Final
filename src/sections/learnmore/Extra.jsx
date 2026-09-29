@@ -8,11 +8,11 @@ import { ArrowDown } from "lucide-react";
 
 const LearnEXtra = () => {
   return (
-    <ContainerLayout>
+    <ContainerLayout animated={false}>
       <section className="space-y-8 py-10">
 
         {/* Our Beginning */}
-        <HeroCard className="space-y-6 p-6 md:p-8">
+        <HeroCard lift={false} className="space-y-6 p-6 md:p-8">
           <div className="space-y-2">
             <Head className="text-primary">
               Our Beginning
@@ -76,7 +76,7 @@ const LearnEXtra = () => {
 
 
         {/* Evolution */}
-        <HeroCard className="space-y-7 p-6 md:p-8">
+        <HeroCard lift={false} delay={0.12} className="space-y-7 p-6 md:p-8">
           <div className="space-y-2">
             <Head className="text-primary">
               The Evolution
@@ -168,7 +168,7 @@ const LearnEXtra = () => {
 
 
         {/* Building for Africa */}
-        <HeroCard className="space-y-6 p-6 md:p-8">
+        <HeroCard lift={false} delay={0.24} className="space-y-6 p-6 md:p-8">
           <div className="space-y-2">
             <Head className="text-primary">
               Building for Africa
@@ -212,7 +212,7 @@ const LearnEXtra = () => {
 
 
         {/* Ecosystem */}
-        <HeroCard className="space-y-7 p-6 md:p-8">
+        <HeroCard lift={false} className="space-y-7 p-6 md:p-8">
           <div className="space-y-2">
             <Head className="text-primary">
               The Local Stream Ghana Ecosystem
@@ -289,7 +289,7 @@ const LearnEXtra = () => {
 
 
         {/* What We Believe */}
-        <HeroCard className="space-y-7 p-6 md:p-8">
+        <HeroCard lift={false} delay={0.12} className="space-y-7 p-6 md:p-8">
           <div className="space-y-2">
             <Head className="text-primary">
               What We Believe
